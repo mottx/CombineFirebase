@@ -10,6 +10,7 @@ import Combine
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension CollectionReference {
     
     public func addDocument(data: [String: Any]) -> AnyPublisher<DocumentReference, Error> {

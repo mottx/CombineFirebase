@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Combine
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension DocumentReference {
     
     public func setData(_ documentData: [String: Any]) -> AnyPublisher<Void, Error> {
@@ -176,6 +177,7 @@ extension DocumentReference {
     }
 }
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension DocumentSnapshot {
     fileprivate final class Subscription<SubscriberType: Subscriber>: Combine.Subscription where SubscriberType.Input == DocumentSnapshot, SubscriberType.Failure == Error {
         private var registration: ListenerRegistration?

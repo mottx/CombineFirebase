@@ -9,6 +9,7 @@
 import FirebaseFirestore
 import Combine
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Query {
     
     struct Publisher: Combine.Publisher {
@@ -63,6 +64,7 @@ extension Query {
     }
 }
 
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension QuerySnapshot {
     fileprivate final class Subscription<SubscriberType: Subscriber>: Combine.Subscription where SubscriberType.Input == QuerySnapshot, SubscriberType.Failure == Error {
         private var registration: ListenerRegistration?
